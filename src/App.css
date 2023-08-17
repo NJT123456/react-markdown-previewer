@@ -1,0 +1,212 @@
+/* Editor */
+
+.editorWrap{
+  max-width: 600px;
+  margin: 1.125rem auto;
+}
+
+.editorWrap .toolbar{
+  width: 99%;
+}
+
+.toolbar{
+  display: flex;
+  align-items: center;
+  background-color: #4aa3a3;
+  padding: 0.3rem;
+  border: 1px solid #1d2f2f;
+  box-shadow: 1px 1px 10px 2px #3a5f5f;
+  font-family: 'Russo One';
+  font-size: 1rem;
+  color: black;
+  justify-content: space-between;
+}
+
+.container-text{
+  display: flex;
+  align-items: center;
+}
+
+.toolbar .icon-free{
+  width: 25px;
+  margin-left: 5px;
+}
+
+.icon-free{
+  margin-right: 3px;
+}
+
+.toolbar .icon-show{
+  width: 25px;
+  margin-left: auto;
+  cursor: pointer;
+}
+
+.editorWrap textarea{
+  width: 99%;
+  min-height: 200px;
+  margin-bottom: -5px;
+  resize: vertical;
+  outline: none;
+  padding-left: 5px;
+  padding-top: 5px;
+  font-size: 0.875rem;
+}
+
+.maximized textarea{
+  min-height: 95vh;
+  resize: none;
+}
+
+/* Separator */
+
+.separator {
+  width: 100px;
+}
+
+/* Previewer */
+
+.previewWrap{
+  max-width: 800px;
+  margin: 1.125rem auto;
+  min-height: 200px;
+  overflow-wrap: break-word;
+}
+
+.previewWrap .toolbar{
+  box-shadow: inset 0px 0px 0px 0px #3a5f5f;
+  border-left: none;
+  border-right: none;
+}
+
+.editorWrap textarea, .previewWrap{
+  background-color: #c0d8d8;
+  border: 1px solid #1d2f2f;
+  box-shadow: 1px 1px 10px 2px #3a5f5f;
+  border-top: none;
+}
+
+.hide{
+  display: none;
+}
+
+.maximized{
+  width: 96%;
+  min-height: 100vh;
+  margin: auto;
+}
+
+#preview{
+  padding: 0 1rem;
+}
+
+#preview blockquote{
+  border-left: 3px solid #224b4b;
+  color: #224b4b;
+  padding-left: 5px;
+  margin-left: 25px;
+}
+
+#preview > p > code{
+  padding: 3px;
+}
+
+#preview code{
+  background: white;
+  font-size: 0.875rem;
+  font-weight: bold;
+}
+
+#preview pre{
+  display: block;
+  overflow: auto;
+  background: white;
+  line-height: 1.2;
+  padding: 5px;
+}
+
+#preview h1{
+  border-bottom: 2px solid #224b4b;
+}
+
+#preview h2{
+  border-bottom: 1px solid #224b4b;
+}
+
+#preview table{
+  border-collapse: collapse;
+}
+
+#preview :where(td,th){
+  border: 2px solid #224b4b;
+  padding: 5px;
+}
+
+#preview th{
+  text-align: center;
+}
+
+#preview img{
+  display: block;
+  max-width: 90%;
+  margin: 2rem auto;
+}
+
+@media screen and (min-width: 1024px) {
+  .container{
+    display: flex;
+    margin: 0 auto;
+    max-width: 1600px;
+    width: 100%;
+    padding: 15px;
+  }
+
+  .separator{
+    width: 20px;
+  }
+
+  .editorWrap, .previewWrap{
+    display: flex;
+    flex-flow: column;
+    flex-basis: 50%;
+    max-width: 50%;
+  }
+
+  .editorWrap textarea, #preview{
+    height: 100vh;
+    overflow: auto;
+    padding: 1em;
+    resize: none;
+  }
+
+  .icon-show{
+    display: none;
+  }
+}
+
+/* responsive */
+@media screen and (max-width: 850px) {
+  .previewWrap {
+    max-width: 630px;
+  }
+
+  .editorWrap {
+    max-width: 550px;
+  }
+}
+
+@media screen and (max-width: 650px) {
+  .editorWrap{
+    width: 80vw;
+    margin: 0 auto;
+  }
+
+  .previewWrap{
+    width: 90vw;
+  }
+
+  .maximized{
+    width: 95%;
+    margin: auto;
+  }
+}
